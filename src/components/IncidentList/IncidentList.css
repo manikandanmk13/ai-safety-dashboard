@@ -1,0 +1,77 @@
+.incident-list-container {
+  margin-top: var(--spacing-lg);
+}
+
+.controls {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.control-group label {
+  font-weight: 500;
+}
+
+select {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: white;
+}
+
+.incident-list {
+  display: grid;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+}
+
+.incident-list h2 {
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+.incident-list-empty {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.incident-list-empty p {
+  margin-bottom: var(--spacing-md);
+}
+
+.incident-list-empty button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.incident-list-empty button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  .control-group {
+    width: 100%;
+  }
+}

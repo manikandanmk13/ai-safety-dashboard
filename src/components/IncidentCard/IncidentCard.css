@@ -1,0 +1,66 @@
+.incident-card {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.incident-card:hover {
+  box-shadow: var(--box-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.incident-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.incident-title {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.incident-title h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.severity-badge {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.incident-date {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.toggle-button {
+  color: var(--primary-color);
+  font-weight: 500;
+  padding: var(--spacing-xs) 0;
+  transition: color 0.2s ease;
+}
+
+.toggle-button:hover {
+  color: var(--primary-hover);
+}
+
+.incident-description {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+  line-height: 1.6;
+  color: var(--text-color);
+}

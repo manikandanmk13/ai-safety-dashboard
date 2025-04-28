@@ -1,0 +1,179 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.controls {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+  background-color: var(--surface-hover);
+}
+
+.filterButton.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.sortButton {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transition: all 0.2s ease;
+}
+
+.sortButton:hover {
+  background-color: var(--surface-hover);
+}
+
+.incidentCard {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  transition: all 0.2s ease;
+}
+
+.incidentCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-md);
+}
+
+.incidentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.incidentTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.severity {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.severity.low {
+  background-color: var(--severity-low);
+  color: var(--text-on-severity-low);
+}
+
+.severity.medium {
+  background-color: var(--severity-medium);
+  color: var(--text-on-severity-medium);
+}
+
+.severity.high {
+  background-color: var(--severity-high);
+  color: var(--text-on-severity-high);
+}
+
+.incidentDate {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.incidentDescription {
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.5;
+}
+
+.incidentFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--border-color);
+}
+
+.incidentStatus {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.875rem;
+}
+
+.statusIndicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.statusIndicator.open {
+  background-color: var(--status-success);
+}
+
+.statusIndicator.closed {
+  background-color: var(--status-error);
+}
+
+.incidentActions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  color: var(--text-color);
+  background-color: var(--surface-hover);
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  .incidentHeader {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .incidentFooter {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+  }
+} 
